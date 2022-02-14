@@ -22,15 +22,15 @@ export default function Counter() {
   const [count, dispatch] = useReducer(countReducer, 0)
 
   useEffect(() => {
-    if (count.count === 0) {
+    if (count === 0) {
       setCurrentColor(pinkRGB)
     }
 
-    if (count.count > 0) {
+    if (count > 0) {
       setCurrentColor(`rgb(52, 211, 153)`)
     }
 
-    if (count.count < 0) {
+    if (count < 0) {
       setCurrentColor(`rgb(239, 68, 68)`)
     }
   }, [count])
